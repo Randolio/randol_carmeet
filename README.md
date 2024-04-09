@@ -4,7 +4,7 @@
 
 The LS car meet. This place absolutely fascinates me from GTA Online and like usual, I wanted to recreate it. After countless hours reading decomp, translating and testing I have managed to piece together a almost perfect replica from GTA Online.
 
-Alternatives folder provides other configs created by other people using different MLO's. Please read them if you wish to use them. Not providing support.
+Alternative folders provide other configs created by other people using different MLO's. Please read them if you wish to use them. Not providing support.
 
 **Information**:
 
