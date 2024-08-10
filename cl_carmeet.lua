@@ -46,7 +46,7 @@ local function clearEntities()
 end
 
 local function createPrizeVehicleScene()
-    lib.requestModel(Config.Prize.slamtruck.model, 2000)
+    lib.requestModel(Config.Prize.slamtruck.model, 10000)
     local coords = Config.Prize.slamtruck.coords
     local vehicle = CreateVehicle(Config.Prize.slamtruck.model, coords.x, coords.y, coords.z, coords.w, false, true)
     SetVehicleColours(vehicle, 73, 132)
@@ -73,7 +73,7 @@ local function createPrizeVehicleScene()
 
     entities[#entities+1] = vehicle
 
-    lib.requestModel(Config.Prize.zr350.model, 2000)
+    lib.requestModel(Config.Prize.zr350.model, 10000)
     local _coords = Config.Prize.zr350.coords
     local prizeVehicle = CreateVehicle(Config.Prize.zr350.model, _coords.x, _coords.y, _coords.z, _coords.w, false, true)
     SetVehicleColours(prizeVehicle, 73, 27)
@@ -102,7 +102,7 @@ end
 local function carmeetPeds()
     for i = 1, #Config.Peds do
         local v = Config.Peds[i]
-        lib.requestModel(v.model, 2000)
+        lib.requestModel(v.model, 10000)
         local ped = CreatePed(0, v.model, v.coords.x, v.coords.y, v.coords.z-1.0, v.coords.w, false, false)
         SetEntityProofs(ped, true, true, true, true, true, false, false, false)
         if v.default then
@@ -147,7 +147,7 @@ end
 local function carmeetVehicles()
     for i = 1, #Config.Vehicles do
         local v = Config.Vehicles[i]
-        lib.requestModel(v.model, 2000)
+        lib.requestModel(v.model, 10000)
         
         local vehicle = CreateVehicle(v.model, v.coords.x, v.coords.y, v.coords.z, v.coords.w, false, true)
         SetVehicleModKit(vehicle, 0)
@@ -199,7 +199,7 @@ local function createMimi()
     lib.requestAnimDict(dict, 2000)
 
     for i = 1, #models do 
-        lib.requestModel(models[i], 2000)
+        lib.requestModel(models[i], 10000)
     end
 
     local mimi = CreatePed(5, models[1], coords.x, coords.y, coords.z, coords.w, false, false)
@@ -232,8 +232,8 @@ local function initScene()
     local model = Config.RaceOrg.model
     local dict = 'ANIM@SCRIPTED@CARMEET@TUN_MEET_IG2_RACE@'
 
-    lib.requestAnimDict(dict, 2000)
-    lib.requestModel(model, 2000)
+    lib.requestAnimDict(dict, 10000)
+    lib.requestModel(model, 10000)
 
     local ped = CreatePed(5, model, coords.x, coords.y, coords.z, coords.w, false, false)
     SetEntityProofs(ped, true, true, true, true, true, false, false, false)
